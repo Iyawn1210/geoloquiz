@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geoloquiz</title>
+    <link rel="icon" href="assets/geoloquizLogo.png" type="imaage/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="homePage.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="quizPage.css" />
+    <link rel="stylesheet" href="animation.css" />
+  </head>
+  <body>
+    <section class="homePage ">
+      <!-- Video background -->
+      <video autoplay loop muted src="assets/bg3.mp4"></video>
+      <!-- navigation bar -->
+      <nav class="nav-bar">
+        <div class="list-container">
+          <img class="list-btn" src="assets/list.png" />
+          <h1 class="achievements-num">2</h1>
+        </div>
+            <!-- Tooltip -->
+            <h1 class="list-tooltip hidden">Achievements List</h1>
+      </nav>
+      <!-- search area -->
+      <div class="search-area-container">
+        <h1>Geoloquiz</h1>
+        <div class="search-container">
+          <button class="search-btn"></button>
+          <input type="text" id="search-country" placeholder="country name" />
+        </div>
+      </div>
+      <!-- Achievements modal -->
+      <section class="achievements-modal">
+        <h1 class="title">Achievements</h1>
+        <div class="achievements-container">
+          <!-- Achievements box-->
+          <!-- <div class="achievements-box">
+            <img src="assets/goldMedal.png" />
+            <div>
+              <h1>Status: <span class="status">Perfect</span></h1>
+              <h1>Scored: <span class="score">1/2</span></h1>
+              <h1>Quiz: <span class="country-quiz">Philippines</span></h1>
+            </div>
+          </div> -->
+          </div>
+        
+          <!-- Sort button -->
+          <img class="settings-btn" src="assets/settingsBtn.png">
+          <!-- Sorting options -->
+          <div class="options-settings">
+              <h1 class="sort-date">Sort by date</h1>
+              <h1 class="sort-favorites">Sort by favorites</h1>
+              <h1 class="sort-highest">Sort by highest</h1>
+              <h1 class="delete-all">Delete all</h1>
+          </div>
+      </section>  
+      <!-- Agreements form -->
+      <div class="agreement-form hidden">
+            <h1>Test Overview and Agreement</h1>
+          <!-- Upper part(agreement and checkbox) -->
+          <div> 
+            <p>By proceeding with this test, you will encounter multiple-choice questions. After submitting, your answers will be displayed, and you can choose to either retake the test or finalize your attempt. Retaking the test will increase your attempt count and may lower your status. However, if you are satisfied with your results and choose to complete the test, no further actions are needed. By clicking "Agree," you acknowledge these conditions and accept the terms of the test process.</p>
+            <form>
+              <input type="checkbox" id="agree" required>
+              <label for="checkbox">Agree with the terms</label>
+              <input class="agree-btn"type="submit" value="Let's Go" >
+            </form>
+          </div>
+          <img class="close-agreement-btn" src="assets/closeBtn.png">
+        </div>
+
+        <!-- layout1 blur -->
+        <div class="layout1"></div>
+      <!-- Layout for agreement -->
+       <div class="layout2 hidden"></div>
+    </section>
+    <section class="quizPage hidden">
+      <!-- Header -->
+      <nav class="nav-header">
+        <img class="home-button" src="assets/homeBtn.png">
+        <input class="like-country"  type="checkbox">
+        <h1>Country:<span class="country-name"></span></h1>
+        <h1 class="quiz-score-box hidden"><span class="quiz-score">12</span>/<span class="quiz-length">20</span></h1>
+        <div>
+          <h4>Timer</h4>
+          <h3 class="timer"></h3>
+        </div>
+
+      </nav>
+      <!-- Lower section containing left nav bar and quiz area -->
+      <section class="lower-section-quiz">
+          <nav class="nav-bar-left">
+            <h1>Test Contents</h1>
+            <ul class="list-contents">
+              <li><a href="#easy-part">Effortlessly Simple</a></li>
+              <li><a href="#medium-part">Moderately Challenging</a></li>
+              <li><a href="#hard-part">Exceptionally Difficult</a></li>
+
+            </ol>
+          </nav>
+          <form class="quiz-area">
+            <!-- History questions -->
+              <section id="easy-part" class="part">
+                <h1>Effortlessly Simple </h1>
+             </section>
+             <section id="medium-part" class="part">
+              <h1>Moderately Challenging</h1>
+           </section>
+           <section id="hard-part" class="part">
+            <h1>Exceptionally Difficult</h1>
+         </section>
+             <div class="buttons">
+              <input class="submit-quiz" id="submit-quiz" type="submit">
+                <button class="done-quiz hidden" type="button">Done</button>
+
+             </div>
+        </form>
+
+      </section>
+      <!-- Modal for home button -->
+       <div class="exit-quiz-modal hidden">
+          <h1>All of your answers will not be submitted after exit. Do you still want to exit the quiz?</h1>
+          <div>
+            <button class="yes-btn">Yes</button>
+            <button class="no-btn">No</button>
+          </div>
+       </div>
+       <div class="layout3 hidden"></div>
+       <!--  starting layout-->
+         <div class="start-layout">
+            <div class="loading-page hidden">
+              <h1>Just Preparing Your Test ⏳</h1>
+            </div>
+            <div class="exiting-page hidden ">
+              <h1>Your time has ended.</h1>
+            </div>
+            <button class="start-quiz-btn">I'm Ready!</button>
+         </div>
+    </section>
+  </body>
+</html>

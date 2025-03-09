@@ -1,0 +1,20 @@
+Project Definition: This project is called geoloquiz which generates a quiz depending on what country the user
+had inputted. On the home page, the user can type any country that he/she wants to
+take a quiz with. The quiz contains 8 items dividing into 3 parts which is the easy, medium and hard. With the 
+short amount of time, the timer is set to only 30 seconds so that it pressures the user. THe user can log
+all of his achievements in the localeStorage which can be modified and sorted by date, time, liked country and most 
+of all, it can all be deleted. 
+
+Project Specification:
+- This project uses the RestCountryApi which gives everything that you need to know for a country.
+- This project uses OOP
+- It has a flowchart and UML
+
+Project Duration: 1 week
+Project Satisfaction: 70%
+Scope Gap: 
+- reset function
+- screen compatibility
+- 5 sections of the quiz
+
+
